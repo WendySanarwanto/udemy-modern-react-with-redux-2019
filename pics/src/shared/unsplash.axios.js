@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const UNSPLASH_ACCESS_KEY = `afb2ebf8e6f6ac775c439307183cf6e0094e686f39664324fa1b9bede37a58b6`;
+const UNSPLASH_ACCESS_KEY = `${process.env.REACT_APP_UNSPLASH_CLIENT_ID}`;
+console.log(`UNSPLASH_ACCESS_KEY = ${UNSPLASH_ACCESS_KEY}`);
 const UNSPLASH_API_URL = `https://api.unsplash.com`;
 
 export default axios.create({
