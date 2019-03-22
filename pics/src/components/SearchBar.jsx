@@ -9,10 +9,25 @@ import React from "react";
 class SearchBarComponent extends React.Component {
   state = { term: '' };
 
-  onFormSubmit(event) {
+  // constructor(props) {
+  //   super(props);
+
+  //   // This is a way to solve `Cannot read property 'xyz' of undefined ` error
+  //   this.onFormSubmit = this.onFormSubmit.bind(this);
+  // }
+
+  // NOTE: If you go on this way, you will need to bind this method, inside constructor
+  // onFormSubmit(event) {
+  //   event.preventDefault();
+
+  //   console.log(`this.state.term: ${this.state.term}`);
+  // }
+
+  onFormSubmit = (event) => {
     event.preventDefault();
 
     console.log(`this.state.term: ${this.state.term}`);
+    this.props.onSubmit(this.state.term);
   }
 
   render() {
