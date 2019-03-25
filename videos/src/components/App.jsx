@@ -7,7 +7,7 @@ import VideoList from './VideoList';
 const YOUTUBE_API_SEARCH_VIDEO_PATH = '/search';
 
 class App extends Component {
-  state = { videos: [] };
+  state = { videos: [], selectedVideo: null };
 
   onTermSubmit = async (term) => {
     // console.log(`this.state.term = ${term}`);
@@ -27,11 +27,16 @@ class App extends Component {
     console.log(`this.state.videos: \n`, this.state.videos);
   }
 
+  onVideoSelect = ( video ) =>{
+    console.log(`video: \n`, video);
+    this.setState({ selectedVideo: video });    
+  }
+
   render() {
     return (
       <div className="ui container">
         <SearchBar onFormSubmit={ this.onTermSubmit } />
-        <VideoList videos={ this.state.videos } />
+        <VideoList videos={ this.state.videos } onVideoSelect={ this.onVideoSelect } />
       </div>
     );
   }
