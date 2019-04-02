@@ -27,7 +27,7 @@ class SongList extends Component {
     }
 
     return ( 
-      <div className="ui  divided list">{ this.renderList( songs ) }</div>
+      <div className="ui divided list">{ this.renderList( songs ) }</div>
     );
   }
 };
