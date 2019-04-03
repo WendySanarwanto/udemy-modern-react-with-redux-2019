@@ -1,10 +1,9 @@
+import _ from "lodash";
 
-import _ from 'lodash';
+import jsonPlaceholder from "../shared/jsonPlaceholder.axios";
 
-import jsonPlaceholder from '../shared/jsonPlaceholder.axios';
-
-export const FETCH_POSTS = 'FETCH_POSTS';
-export const FETCH_USER = 'FETCH_USER';
+export const FETCH_POSTS = "FETCH_POSTS";
+export const FETCH_USER = "FETCH_USER";
 
 export const fetchPostsAndUsers = () => {
   return async (dispatch, getState) => {
@@ -19,7 +18,7 @@ export const fetchPostsAndUsers = () => {
       .forEach(userId => dispatch(fetchUser(userId)))
       .value();
   };
-}
+};
 
 // export const fetchPosts = () => async (dispatch, getState) => {
 //   const response = await jsonPlaceholder.get('/posts');
@@ -28,23 +27,23 @@ export const fetchPostsAndUsers = () => {
 // };
 
 export const fetchPosts = () => {
-  return async (dispatch) => {
-    const response = await jsonPlaceholder.get('/posts');
+  return async dispatch => {
+    const response = await jsonPlaceholder.get("/posts");
     let posts = response && response.status === 200 ? response.data : [];
-    dispatch({ type: FETCH_POSTS, payload: posts });    
+    dispatch({ type: FETCH_POSTS, payload: posts });
   };
-}
+};
 
 // Without memoization
-export const fetchUser = (userId) => {
-  return async (dispatch) => {
+export const fetchUser = userId => {
+  return async dispatch => {
     const response = await jsonPlaceholder.get(`/users/${userId}`);
 
     console.log(`response fetchUser: \n`, response);
     let user = response && response.status === 200 ? response.data : {};
-    dispatch({ type: FETCH_USER, payload: user })
-  }
-}
+    dispatch({ type: FETCH_USER, payload: user });
+  };
+};
 
 // // Memoize FETCH_USER, to ensure that fetchUser method is not repeated to be called with same userId argument
 // export const fetchUser = userId => dispatch => _fetchUser(userId, dispatch);
