@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const STREAMY_GOOGLE_OAUTH_CLIENT_ID = process.env.REACT_APP_STREAMY_GOOGLE_OAUTH_CLIENT_ID;
 
-console.log(`STREAMY_GOOGLE_OAUTH_CLIENT_ID: ${STREAMY_GOOGLE_OAUTH_CLIENT_ID}`);
+// console.log(`STREAMY_GOOGLE_OAUTH_CLIENT_ID: ${STREAMY_GOOGLE_OAUTH_CLIENT_ID}`);
 
 class GoogleAuth extends Component {
   state = { isSignedIn: null};
