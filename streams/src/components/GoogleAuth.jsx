@@ -28,7 +28,16 @@ class GoogleAuth extends Component {
 
   onAuthChange = (isSignedIn) => {
     if (isSignedIn) {
-      this.props.signedIn();
+      const currentUser = this.googleOauth2.currentUser.get();
+      const authResponse = currentUser.getAuthResponse();
+      const basicProfile = currentUser.getBasicProfile();
+
+      const id = currentUser.getId();
+      const { token_type, access_token, expires_at  } = authResponse;
+      const authToken = { token_type, access_token, expires_at  };
+      const userProfile = { name: basicProfile.getName(), imageUrl: basicProfile.getImageUrl() };
+
+      this.props.signedIn(id, authToken, userProfile);
     } else {
       this.props.signedOut();
     }
