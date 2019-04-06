@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
+import auth from './authReducer';
+
 const combinedReducers = combineReducers({
-  delme: (state = [], action) => { return state; }
+  auth
 });
 
 export default combinedReducers;
