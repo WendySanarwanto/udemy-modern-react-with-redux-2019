@@ -1,8 +1,8 @@
 import streamyApi from "../api/streamy.axios";
-
 import { SIGNED_IN, SIGNED_OUT,
   CREATE_STREAM, FETCH_STREAMS, FETCH_STREAM, DELETE_STREAM, EDIT_STREAM
 } from './types';
+import history from '../history';
 
 const STREAMS_API_PATH = "/streams";
 
@@ -16,9 +16,11 @@ export const signedIn = (userId, authToken, userProfile) => {
 }
 
 export const signedOut = () => {
+  // get the user back to the root route
+  history.push('/');
   return {
     type: SIGNED_OUT    
-  };
+  };  
 }
 
 export const createStream = formValues => async (dispatch, getState) => {
@@ -26,8 +28,10 @@ export const createStream = formValues => async (dispatch, getState) => {
   const data = { ...formValues, userId };
   console.log(`[DEBUG] <createStream> data: \n`, data);
   const response = 
-    await streamyApi.post(STREAMS_API_PATH, data);
-  dispatch({ type: CREATE_STREAM, payload: response.data });  
+    await streamyApi.post(STREAMS_API_PATH, data);      
+  dispatch({ type: CREATE_STREAM, payload: response.data });
+  // get the user back to the root route
+  history.push('/');
 }
 
 export const fetchStreams = () => async dispatch => {

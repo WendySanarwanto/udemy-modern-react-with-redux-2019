@@ -11,12 +11,12 @@ class StreamList extends Component {
     fetchStreams();
   }
 
-  renderDeleteEditButtons = (userId) => {
+  renderDeleteEditButtons = (streamId, userId) => {
     const { currentUserId } = this.props;
     if (currentUserId === userId) {
       return (
         <div className="right floated content">
-          <button className="ui button primary">Edit</button>
+          <Link to={ `/streams/edit/${streamId}` } className="ui button primary">Edit</Link>
           <button className="ui button negative">Delete</button>
         </div>
       );
@@ -39,7 +39,7 @@ class StreamList extends Component {
             { title }
             <div className="description">{ description }</div>
           </div>
-          { this.renderDeleteEditButtons(userId) }
+          { this.renderDeleteEditButtons(id, userId) }
         </div>
       );
     });
