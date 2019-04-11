@@ -5,9 +5,8 @@ import { createStream } from '../../actions';
 
 class StreamCreate extends Component {
 
-  onSubmit = ({ title, description }) => {
-    // console.log(`<StreamCreate.onSubmit> title: ${title}; description: ${description}`);
-    this.props.createStream(title, description);
+  onSubmit = (formValues) => {
+    this.props.createStream(formValues);
   }
 
   renderError = ({ error, touched }) => {

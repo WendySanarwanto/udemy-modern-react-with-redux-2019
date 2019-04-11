@@ -21,9 +21,12 @@ export const signedOut = () => {
   };
 }
 
-export const createStream = (title, description) => async dispatch => {
+export const createStream = formValues => async (dispatch, getState) => {
+  const { userId } = getState().auth;
+  const data = { ...formValues, userId };
+  console.log(`[DEBUG] <createStream> data: \n`, data);
   const response = 
-    await streamyApi.post(STREAMS_API_PATH, { title, description });
+    await streamyApi.post(STREAMS_API_PATH, data);
   dispatch({ type: CREATE_STREAM, payload: response.data });  
 }
 

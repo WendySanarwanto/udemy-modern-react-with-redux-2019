@@ -4,6 +4,17 @@
       "title": "Let's code ReactJS App - Day #1",
       "description": "In Day#1 , we are going to learn how to create & setup a new ReactJS app project",
       "id": 1
+    },
+    {
+      "title": "Let's code ReactJS App - Day #2",
+      "description": "In Day#2, we are going to clearn how to create components to build a simple page with a header and list of items",
+      "id": 2
+    },
+    {
+      "title": "Let's learn Python Programming",
+      "description": "In this stream channel, we will learn Python programming, presented by WendySa",
+      "userId": "111376813461154219286",
+      "id": 3
     }
   ]
 }
