@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { 
         //  HashRouter,
         //  MemoryRouter,
-        BrowserRouter,
+        // BrowserRouter,
+        Router,
         Route } from 'react-router-dom';
 
 import StreamCreate from './streams/StreamCreate';
@@ -11,6 +12,7 @@ import StreamEdit from './streams/StreamEdit';
 import StreamList from './streams/StreamList';
 import StreamShow from './streams/StreamShow';
 import Header from './Header';
+import customHistory from '../history';
 
 class App extends Component {
   render() {
@@ -18,7 +20,8 @@ class App extends Component {
       <div className="ui container" >
         {/* <HashRouter> */}
         {/* <MemoryRouter> */}
-        <BrowserRouter>
+        {/* <BrowserRouter> */}
+        <Router history={ customHistory }>
           <div>
             <Header />
             <Route path="/" exact component={StreamList} />
@@ -27,7 +30,8 @@ class App extends Component {
             <Route path="/streams/delete" exact component={StreamDelete}/>
             <Route path="/streams/show" exact component={StreamShow}/>
           </div>
-        </BrowserRouter>
+        </Router>
+        {/* </BrowserRouter> */}
         {/* </HashRouter> */}
         {/* </MemoryRouter> */}
       </div>
