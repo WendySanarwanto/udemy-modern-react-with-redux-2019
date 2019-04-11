@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { fetchStreams } from '../../actions';
 import { isArray } from 'util';
@@ -10,13 +11,27 @@ class StreamList extends Component {
     fetchStreams();
   }
 
+  renderDeleteEditButtons = (userId) => {
+    const { currentUserId } = this.props;
+    if (currentUserId === userId) {
+      return (
+        <div className="right floated content">
+          <button className="ui button primary">Edit</button>
+          <button className="ui button negative">Delete</button>
+        </div>
+      );
+    }
+
+    return null
+  }
+
   renderList = (streams) => {
     if ( !isArray(streams)) {
       return <div>Loading ...</div>
     }
 
     const streamsList = streams.map(_stream => {
-      const { id, title, description } = _stream;
+      const { id, title, description, userId } = _stream;
       return (
         <div key={ id } className="item">
           <i className="large middle aligned icon camera" />
@@ -24,6 +39,7 @@ class StreamList extends Component {
             { title }
             <div className="description">{ description }</div>
           </div>
+          { this.renderDeleteEditButtons(userId) }
         </div>
       );
     });
@@ -31,12 +47,27 @@ class StreamList extends Component {
     return streamsList;
   }
 
+  /**
+   * Only shown when a user is signed in
+   */
+  renderCreateLink(isSignedIn) {
+    if (isSignedIn) {
+      return (
+        <div style={{ textAlign: 'right' }}>
+          <Link to="/streams/new" className="ui button positive">Create</Link>
+        </div>
+      );
+    }
+    return null;
+  }
+
   render() {
-    const { streams } = this.props;
+    const { streams, isSignedIn } = this.props;
     return (
       <div>
         <h2>Streams</h2>
         <div className="ui celled list">{this.renderList(streams)}</div>
+        { this.renderCreateLink(isSignedIn) }        
       </div>
     );
   }
@@ -44,7 +75,9 @@ class StreamList extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    streams: Object.values(state.streams)
+    streams: Object.values(state.streams),
+    currentUserId: state.auth.userId,
+    isSignedIn: state.auth.isSignedIn
   };
 }
 
