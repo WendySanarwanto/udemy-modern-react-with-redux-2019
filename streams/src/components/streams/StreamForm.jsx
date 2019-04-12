@@ -31,7 +31,7 @@ class StreamForm extends Component {
     );
   }
 
-  render(){    
+  render(){
     return (
       <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="ui error form">
         <Field name="title" component={ this.renderInput } label="Enter title: " />
@@ -44,11 +44,11 @@ class StreamForm extends Component {
 
 const validate = ({ title, description }) => {
   const errors = {};
-  if ( (!title) || (title.trim() === '')) {
+  if (!title) {
     errors.title = 'You must enter a title.';
   }
 
-  if ( (!description) || (description.trim() === '') ) {
+  if (!description) {
     errors.description = 'You must enter a description';
   }
 
