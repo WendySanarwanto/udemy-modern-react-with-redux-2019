@@ -13,7 +13,10 @@ class StreamCreate extends Component {
   render() {
     // console.log(`this.props: \n`, this.props);
     return (
-      <StreamForm onSubmit={ this.onSubmit } />
+      <div>
+        <h3>Create a Stream</h3>
+        <StreamForm onSubmit={ this.onSubmit } />
+      </div>
     );
   }
 };

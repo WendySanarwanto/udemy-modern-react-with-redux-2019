@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 
-import { editStream } from '../../actions';
+import { editStream, fetchStream } from '../../actions';
 
 class StreamEdit extends Component {
+  componentDidMount() {
+    this.props.fetchStream(this.props.selectedStream.id);
+  }
+
   onSubmit = (event) => {
     event.preventDefault();
     const { match, selectedStream } = this.props;
@@ -82,4 +86,4 @@ const wrappedForm = reduxForm({
   validate
 })(StreamEdit);
 
-export default connect(mapStateToProps, { editStream })(wrappedForm);
+export default connect(mapStateToProps, { editStream, fetchStream })(wrappedForm);
