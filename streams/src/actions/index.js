@@ -44,9 +44,10 @@ export const fetchStream = (id) => async dispatch => {
   dispatch({ type: FETCH_STREAM, payload: response.data });
 }
 
-export const editStream = (id, title, description) => async dispatch => {
-  const response = await streamyApi.put(`${STREAMS_API_PATH}/${id}`, { title, description });
+export const editStream = (id, title, description, userId) => async dispatch => {
+  const response = await streamyApi.patch(`${STREAMS_API_PATH}/${id}`, { title, description, userId });
   dispatch({ type: EDIT_STREAM, payload: response.data });
+  history.push('/');
 }
 
 export const deleteStream = (id) => async dispatch => {
