@@ -16,6 +16,6 @@ const store = createStore(combinedReducers, composeEnhancer( applyMiddleware(thu
 
 ReactDOM.render( 
   <Provider store = { store } >
-    <App / >
+    <App />
   </Provider>, 
 document.querySelector('#root'));
