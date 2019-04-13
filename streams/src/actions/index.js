@@ -52,7 +52,8 @@ export const editStream = (id, title, description, userId) => async dispatch => 
 
 export const deleteStream = (id) => async dispatch => {
   await streamyApi.delete(`${STREAMS_API_PATH}/${id}`);
-  dispatch({ type: DELETE_STREAM, paylaod: id });
+  dispatch({ type: DELETE_STREAM, payload: id });
+  history.push('/');
 }
 
 export * from './types';
