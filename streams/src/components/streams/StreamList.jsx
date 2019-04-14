@@ -36,7 +36,7 @@ class StreamList extends Component {
         <div key={ id } className="item">
           <i className="large middle aligned icon camera" />
           <div className="content">
-            { title }
+            <Link to={`/streams/${id}`}>{ title }</Link>
             <div className="description">{ description }</div>
           </div>
           { this.renderDeleteEditButtons(id, userId) }
