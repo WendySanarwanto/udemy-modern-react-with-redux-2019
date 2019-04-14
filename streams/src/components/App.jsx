@@ -3,8 +3,7 @@ import {
         //  HashRouter,
         //  MemoryRouter,
         // BrowserRouter,
-        Router,
-        Route } from 'react-router-dom';
+        Router, Route, Switch } from 'react-router-dom';
 
 import StreamCreate from './streams/StreamCreate';
 import StreamDelete from './streams/StreamDelete';
@@ -24,11 +23,13 @@ class App extends Component {
         <Router history={ customHistory }>
           <div>
             <Header />
-            <Route path="/" exact component={StreamList} />
-            <Route path="/streams/new" exact component={StreamCreate}/>
-            <Route path="/streams/edit/:id" exact component={StreamEdit}/>
-            <Route path="/streams/delete/:id" exact component={StreamDelete}/>
-            <Route path="/streams/show/:id" exact component={StreamShow}/>
+            <Switch>
+              <Route path="/" exact component={StreamList} />
+              <Route path="/streams/new" exact component={StreamCreate}/>
+              <Route path="/streams/edit/:id" exact component={StreamEdit}/>
+              <Route path="/streams/delete/:id" exact component={StreamDelete}/>
+              <Route path="/streams/:id" exact component={StreamShow}/>
+            </Switch>
           </div>
         </Router>
         {/* </BrowserRouter> */}
