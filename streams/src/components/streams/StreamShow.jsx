@@ -9,9 +9,18 @@ class StreamShow extends Component {
   }
 
   render() {
-    return (
+    if (!this.props.stream) return null;
+    const { title, description } = this.props.stream;
+
+    return (      
       <div>
-        StreamShow !
+        <div className="ui embed">
+          <iframe src="" title={ title } />
+        </div>
+        <div className="ui segment">
+          <h4 className="ui header">{ title }</h4>
+          <p>{ description }</p>
+        </div>
       </div>
     );
   }
@@ -25,4 +34,4 @@ const mapStateToProps =  (state, ownProps) => {
   };
 }
 
-export default connect(mapStateToProps, fetchStream)(StreamShow);
+export default connect(mapStateToProps, { fetchStream })(StreamShow);
