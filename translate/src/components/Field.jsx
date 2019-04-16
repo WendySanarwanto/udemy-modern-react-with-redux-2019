@@ -11,7 +11,8 @@ export default class Field extends Component {
   }
 
   render() {
-    const title = this.context === 'english' ? 'Name' : 'Naam';
+    console.log(`[debug]<Field.jsx@render> - this.context.language: ${this.context.language}`);
+    const title = this.context.language === 'english' ? 'Name' : 'Naam';
     return (
       <div className="ui field">
         <label>{ title }</label>
