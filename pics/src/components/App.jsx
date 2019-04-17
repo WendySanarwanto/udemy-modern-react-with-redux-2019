@@ -1,5 +1,5 @@
 import ImageList from './ImageList';
-import unsplash from '../shared/unsplash.axios'
+import unsplash from '../api/unsplash.api'
 import React from 'react';
 import SearchBar from './SearchBar';
 
