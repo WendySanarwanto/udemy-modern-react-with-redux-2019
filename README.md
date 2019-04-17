@@ -20,6 +20,8 @@ This repo contains coding exercises that were created when I followed [Udemy's M
     
     * `props.children` - render child component , passed in as props.
 
+    * Generate various kind of fake data by using [faker](https://www.npmjs.com/package/faker) library.
+
 - [pics](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/pics) - Demonstrate how to call 3rd party API by using [axios](https://github.com/axios/axios) library and display the call's result list as a CSS grid-styled list component. Takeaways: 
 
     * Make API Call request through using [axios](https://github.com/axios/axios) library.
@@ -36,9 +38,21 @@ This repo contains coding exercises that were created when I followed [Udemy's M
 
     * Manipulating DOM tag in runtime by using `Ref` system.
 
-    * Grid layout styling by using CSS-Grid.
+    * Grid layout styling by using `CSS-Grid`.
 
-- [seasons](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/seasons) - __TODO: Add info__
+    * Create `.css` file for a particular Component and how to import the `.css` file within the Component's file.
+
+- [seasons](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/seasons) - Demonstrate how to perform data initialisation on a Component by placing the initialisation inside component's `componentDidMount` lifecycle method. Takeaways:
+
+    * `componentDidMount` component lifecycle method that is called once time after a component is attached on page. A perfect place to made one-time data initialisation.
+
+    * Get user's current position through calling `GeoLocation's getCurrentPosition` API (`window.navigator.geolocation.getCurrentPosition` method).
+
+    * CSS stylings: Center element by using `display: flex`, `justify-content` & `align-items` set to `center`. 
+
+    * Semantic UI stylings: Create loading progress spinner by using `active dimmer` , `big text loader`. Creating big icon by using `massive <icon's name> icon`.
+
+    * Set default value on a component's props, through declaring static field `defaultProps`.
 
 - [songs](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/songs) - __TODO: Add info__
 
