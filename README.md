@@ -110,6 +110,10 @@ This repo contains coding exercises that were created when I followed [Udemy's M
   
   - Separate `state` and `callback` from components to `ContextStore` component.
 
-- [hooks-simple](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/hooks-simple) - __TODO: Add info__
+- [hooks-simple](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/hooks-simple) - Demonstrate how to refactor class-based component which use state and lifecycle method to function-based component, by using `Hooks`. Takeaways:
 
-- [hooks-seasons](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/hooks-seasons) - __TODO: Add info__
+  - Allowing function-based component to having state & method to modify it, by using `useState` method.
+  
+  - Allowing function-based component to having lifecycle method, by using `useEffect` method.
+
+- [hooks-seasons](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/hooks-seasons) - Demonstrate how to refactor [seasons](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/seasons) project's class-based components to function-based components.
