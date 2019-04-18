@@ -76,7 +76,7 @@ This repo contains coding exercises that were created when I followed [Udemy's M
   
   - Understand ways to prevent multiple calls being made against an async method, with same name & arguments, in an `action creator`. One fine way to do this is through chaining calls to [lodash](https://www.npmjs.com/package/lodash) methods (`chain`, `map`, `uniq`, `forEach`, `value`).
 
-- [streams](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/streams) Demonstrate Reactjs with Redux application which does CRUD features which follows RESTful conventions. Takeaways:
+- [streams](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/streams) Demonstrate Reactjs with Redux application which does CRUD features and follows RESTful conventions. Takeaways:
 
   - View/Page component's navigation by applying page routing, through using [react-router-dom](https://www.npmjs.com/package/react-router-dom) library.
   
@@ -100,7 +100,15 @@ This repo contains coding exercises that were created when I followed [Udemy's M
   
   - Host video streaming by using [OBS](https://obsproject.com/) software.
 
-- [translate](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/translate) - __TODO: Add info__
+- [translate](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/translate) - Demonstrate how to distribute data/state & callbacks from parent component to its any nested components at below by using `Context` system, instead of using multiple `props` system. Takeaways:
+
+  - Using `Context.Provider` for passing down state to child component and blow.
+  
+  - Consume `Context`'s state through declaring `static contextType` field, assign it with the `Context` type then read the value through accessing `this.context` statement.
+  
+  - Consume `Context`'s state through accessing `Context.Consumer` component.
+  
+  - Separate `state` and `callback` from components to `ContextStore` component.
 
 - [hooks-simple](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/hooks-simple) - __TODO: Add info__
 
