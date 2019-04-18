@@ -54,7 +54,18 @@ This repo contains coding exercises that were created when I followed [Udemy's M
 
     * Set default value on a component's props, through declaring static field `defaultProps`.
 
-- [songs](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/songs) - __TODO: Add info__
+- [songs](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/songs) - Demonstrate how to centralised application's states by using [redux]() & [react-redux]() libraries, in a `Reactjs` application. Takeaways:
+
+    * Centralised application's states on `reducer` functions.
+
+    * Giving abilities to get or manipulate centralised states through invoking `action creator` functions.
+
+    * Connecting ReactJS components to `Redux`'s `action creators` or centralised states through using `react-redux`'s `<Provider>` component & `connect` function.
+
+    * Creating the centralised state's store through using `redux`'s `createStore` method and linked the store to `react-redux`'s `<Provider>` component which wraps the top component in hierarchy (e.g. `App` component).
+
+    * Semantic-UI stylings: grid layout using `grid`, `column`; list item container using `divided list`; item : `item`, right-hand side positioning: `right floated`
+    
 
 - [blog](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/blog) - __TODO: Add info__
 
