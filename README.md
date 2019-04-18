@@ -22,7 +22,7 @@ This repo contains coding exercises that were created when I followed [Udemy's M
 
   - Generate various kind of fake data by using [faker](https://www.npmjs.com/package/faker) library.
 
-- [pics](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/pics) - Demonstrate how to call 3rd party API by using [axios](https://github.com/axios/axios) library and display the call's result list as a CSS grid-styled list component. Takeaways:
+- [pics](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/pics) & [videos](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/videos) - Demonstrate how to call 3rd party API by using [axios](https://github.com/axios/axios) library and display the call's result list as a CSS grid-styled list component. Takeaways:
 
   - Make API Call request through using [axios](https://github.com/axios/axios) library.
 
@@ -54,7 +54,7 @@ This repo contains coding exercises that were created when I followed [Udemy's M
 
   - Set default value on a component's props, through declaring static field `defaultProps`.
 
-- [songs](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/songs) - Demonstrate how to centralised application's states by using [redux]() & [react-redux]() libraries, in a `Reactjs` application. Takeaways:
+- [songs](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/songs) - Demonstrate how to centralised application's states by using [redux](https://www.npmjs.com/package/redux) & [react-redux](https://www.npmjs.com/package/react-redux) libraries, in a `Reactjs` application. Takeaways:
 
   - Centralised application's states on `reducer` functions.
 
@@ -68,7 +68,7 @@ This repo contains coding exercises that were created when I followed [Udemy's M
 
 - [blog](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/blog) - Demonstrat how to make API Call request within `action creator` in correct way, through using [redux-thunk](https://www.npmjs.com/package/redux-thunk), a `redux`'s middleware. Takeaways:
 
-  - Using online Fake API, provided by [JSON Placeholder](http://jsonplaceholder.typicode.com), for demonstrating making API Call requests.
+  - Using online Fake API, provided by [JSON Placeholder](http://jsonplaceholder.typicode.com), for  demonstration of making API Call requests.
   
   - Applying `redux`'s middleware through calling `applyMiddleware` method and pass in the return to `createStore`'s argument.
   
@@ -76,9 +76,29 @@ This repo contains coding exercises that were created when I followed [Udemy's M
   
   - Understand ways to prevent multiple calls being made against an async method, with same name & arguments, in an `action creator`. One fine way to do this is through chaining calls to [lodash](https://www.npmjs.com/package/lodash) methods (`chain`, `map`, `uniq`, `forEach`, `value`).
 
-- [videos](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/videos) - __TODO: Add info__
+- [streams](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/streams) Demonstrate Reactjs with Redux application which does CRUD features which follows RESTful conventions. Takeaways:
 
-- [streams](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/streams) - __TODO: Add info__
+  - View/Page component's navigation by applying page routing, through using [react-router-dom](https://www.npmjs.com/package/react-router-dom) library.
+  
+  - Building form whose fields's values & validation are connected to `redux`, by using [redux-form](https://www.npmjs.com/package/redux-form) library.
+
+  - Create Modal dialog component through using `React.Portal` system and styled using `Semantic-ui`'s modal stylings.
+
+  - Semantic UI stylings - Modals: `dimmer modals visible active`, `standard modal visible active`, `header`, `content`, `action`.
+  
+  - Client side authentication by using `Google OAuth2` & `Google API` and store the Auth info into `Redux` store.
+  
+  - Treat a list of pulled data as an object with a number of properties, in its `reducer` and know ways of how to update its state within the `reducer` by using `Key Interpolation Index` & [lodash](https://www.npmjs.com/package/lodash)'s `mapKeys` & `omit` methods.
+  
+  - Map the state object with number of properties back to list by using `Object.values` method.
+  
+  - Build streaming video component by using [flv.js](https://github.com/Bilibili/flv.js/) & `Ref` system.
+  
+  - Create fake API server by using [json-server](https://www.npmjs.com/package/json-server).
+  
+  - Create video media server (`RTMP`) by using [node-media-server](https://www.npmjs.com/package/node-media-server).
+  
+  - Host video streaming by using [OBS](https://obsproject.com/) software.
 
 - [translate](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/translate) - __TODO: Add info__
 
