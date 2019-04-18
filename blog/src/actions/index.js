@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-import jsonPlaceholder from "../shared/jsonPlaceholder.axios";
+import jsonPlaceholder from "../api/jsonPlaceholder.api";
 
 export const FETCH_POSTS = "FETCH_POSTS";
 export const FETCH_USER = "FETCH_USER";
