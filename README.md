@@ -4,7 +4,7 @@ This repo contains coding exercises that were created when I followed [Udemy's M
 
 ## Coding Exercises
 
-- [jsx](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/jsx) - Demonstrate how to render HTML tags by using `JSX` markups, within main App function-based component. Takeaways: 
+- [jsx](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/jsx) - Demonstrate how to render HTML tags by using `JSX` markups, within main App function-based component. Takeaways:
 
   - jsx (`div`, `label`, `input`, `button`, custom tag of a component).
 
@@ -66,7 +66,15 @@ This repo contains coding exercises that were created when I followed [Udemy's M
 
   - Semantic-UI stylings: grid layout using `grid`, `column`; list item container using `divided list`; item : `item`, right-hand side positioning: `right floated`
 
-- [blog](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/blog) - __TODO: Add info__
+- [blog](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/blog) - Demonstrat how to make API Call request within `action creator` in correct way, through using [redux-thunk](https://www.npmjs.com/package/redux-thunk), a `redux`'s middleware. Takeaways:
+
+  - Using online Fake API, provided by [JSON Placeholder](http://jsonplaceholder.typicode.com), for demonstrating making API Call requests.
+  
+  - Applying `redux`'s middleware through calling `applyMiddleware` method and pass in the return to `createStore`'s argument.
+  
+  - Understand correct ways to perform asynchronous calls inside `action creator` with the help of [redux-thunk](https://www.npmjs.com/package/redux-thunk) middleware.
+  
+  - Understand ways to prevent multiple calls being made against an async method, with same name & arguments, in an `action creator`. One fine way to do this is through chaining calls to [lodash](https://www.npmjs.com/package/lodash) methods (`chain`, `map`, `uniq`, `forEach`, `value`).
 
 - [videos](https://github.com/WendySanarwanto/udemy-modern-react-with-redux-2019/tree/master/videos) - __TODO: Add info__
 
